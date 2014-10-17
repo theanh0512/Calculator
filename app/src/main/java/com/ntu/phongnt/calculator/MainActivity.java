@@ -49,12 +49,12 @@ public class MainActivity extends Activity {
     }
 
     private void setDisplayText(String text){
-        TextView display = (TextView) findViewById(R.id.display);
+        TextView display = (TextView) findViewById(R.id.display_input);
         display.setText(text);
     }
 
     private String getDisplayText(){
-        TextView display = (TextView) findViewById(R.id.display);
+        TextView display = (TextView) findViewById(R.id.display_input);
         return display.getText().toString();
     }
 
