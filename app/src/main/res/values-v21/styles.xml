@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="android:Theme.Material.Light">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.NoActionBar">
+        <!-- Customize your theme here. -->
     </style>
+
+    <style name="theAnhstyle">
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">#333</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="theAnhstyle2">
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">#333</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="theAnhstyle3">
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">#666</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
 </resources>
