@@ -1,4 +1,4 @@
-package com.ptnk.phongnt.calculator;
+package com.ntu.sce.calculator;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

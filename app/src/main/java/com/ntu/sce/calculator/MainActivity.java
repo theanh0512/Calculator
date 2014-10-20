@@ -1,4 +1,4 @@
-package com.ptnk.phongnt.calculator;
+package com.ntu.sce.calculator;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.ptnk.phongnt.calculator.R;
+import com.ntu.sce.calculator.R;
 
 import net.sourceforge.jeval.EvaluationException;
 import net.sourceforge.jeval.Evaluator;
