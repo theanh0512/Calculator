@@ -18,6 +18,8 @@ public class MainActivity extends Activity {
     String ans;
     String current;
     Evaluator evaluator;
+    boolean isEvaluateClicked = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,76 +53,89 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void initialize(){
+    private void initialize() {
         float ans = 0;
         float current = 0;
     }
 
-    private void setDisplayText(String text){
+    private void setDisplayText(String text) {
         TextView display = (TextView) findViewById(R.id.display_input);
         display.setText(text);
     }
 
-    private String getDisplayText(){
+    private String getDisplayText() {
         TextView display = (TextView) findViewById(R.id.display_input);
         return display.getText().toString();
     }
 
-    private void clearDisplay(){
+    private void clearDisplay() {
         setDisplayText("0");
     }
 
-    public void onBackspaceClick(View view){
+    public void onBackspaceClick(View view) {
         String currentText = getDisplayText();
-        if(currentText.length()>0){
-            currentText=currentText.substring(0,currentText.length()-1);
+        if (currentText.length() > 0) {
+            if (!currentText.matches(".*ans")) {
+                currentText = currentText.substring(0, currentText.length() - 1);
+            } else {
+                currentText = currentText.replaceAll("(.*)(ans)", "$1");
+            }
             setDisplayText(currentText);
         }
     }
 
-    private float getNumeric(String string){
-        return Float.parseFloat(string);
-    }
-
-    public void onSymbolClicked(View view){
+    public void onSymbolClicked(View view) {
         String currentText = getDisplayText();
-        Button b = (Button)view;
+        Button b = (Button) view;
         String buttonText = b.getText().toString();
-        if(! currentText.equals("0"))
-            setDisplayText(currentText+buttonText);
-        else
+        if(isEvaluateClicked) {
+            isEvaluateClicked=false;
             setDisplayText(buttonText);
+        }
+        else {
+            if (!currentText.equals("0"))
+                setDisplayText(currentText + buttonText);
+            else
+                setDisplayText(buttonText);
+        }
     }
 
-    public void onOperatorClicked(View view){
+    public void onOperatorClicked(View view) {
         String currentText = getDisplayText();
-        Button b = (Button)view;
+        Button b = (Button) view;
         String buttonText = b.getText().toString();
-        if(! currentText.equals("0"))
-            setDisplayText(currentText+buttonText);
+        if(isEvaluateClicked) {
+            isEvaluateClicked=false;
+            setDisplayText("ans" + buttonText);
+        }
         else
-            setDisplayText("ans"+buttonText);
+            setDisplayText(currentText + buttonText);
     }
 
-    public void onEvaluated(View view){
-        String expression = getDisplayText().replace("ans",ans);
-        try{
+    public void onEvaluated(View view) {
+        isEvaluateClicked = true;
+        String currentDisplayText = getDisplayText();
+        currentDisplayText=currentDisplayText.replaceAll("([\\ds])([a])", "$1*$2");
+        String expression = currentDisplayText.replace("ans", ans);
+        try {
             ans = evaluator.evaluate(expression);
             showResult(ans);
-            clearDisplay();
+        } catch (EvaluationException e) {
+            showResult(currentDisplayText);
         }
-        catch (EvaluationException e){
-            showResult("Error");
-        }
-
     }
 
-    public void showResult(String result){
+    public void onAnsClick(View view) {
+        String currentText = getDisplayText();
+        setDisplayText(currentText + "ans");
+    }
+
+    public void showResult(String result) {
         TextView display = (TextView) findViewById(R.id.display_result);
         display.setText(result);
     }
 
-    public void onCleared(View view){
+    public void onCleared(View view) {
         clearDisplay();
     }
 }

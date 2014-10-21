@@ -419,16 +419,31 @@
                             android:background="@drawable/bg_button" />
                     </LinearLayout>
                 </LinearLayout>
-
-                <Button
-                    style="@style/theAnhstyle2"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_margin="2dp"
-                    android:layout_weight="1"
-                    android:onClick="onEvaluated"
-                    android:text="="
-                    android:background="@drawable/bg_button" />
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                        <Button
+                            style="@style/theAnhstyle2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:id="@+id/ansButton"
+                            android:text="Ans"
+                            android:background="@drawable/bg_button"
+                            android:onClick="onAnsClick"
+                            android:layout_weight="1" />
+                        <Button
+                            style="@style/theAnhstyle2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:layout_weight="1"
+                            android:onClick="onEvaluated"
+                            android:text="="
+                            android:background="@drawable/bg_button"/>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
