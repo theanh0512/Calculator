@@ -70,6 +70,14 @@ public class MainActivity extends Activity {
         setDisplayText("0");
     }
 
+    public void onBackspaceClick(View view){
+        String currentText = getDisplayText();
+        if(currentText.length()>0){
+            currentText=currentText.substring(0,currentText.length()-1);
+            setDisplayText(currentText);
+        }
+    }
+
     private float getNumeric(String string){
         return Float.parseFloat(string);
     }
