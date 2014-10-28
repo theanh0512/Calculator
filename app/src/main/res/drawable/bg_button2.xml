@@ -3,35 +3,14 @@
     <item android:state_pressed="true" >
         <shape>
             <solid
-                android:color="#eb101d43" />
-            <stroke
-                android:width="1dp"
-                android:color="#ff151734" />
-            <corners
-                android:radius="7dp" />
-            <padding
-                android:left="10dp"
-                android:top="10dp"
-                android:right="10dp"
-                android:bottom="10dp" />
+                android:color="#eb231d11" />
         </shape>
     </item>
+
     <item>
         <shape>
-            <gradient
-                android:startColor="#ff434345"
-                android:endColor="#ff2f2c26"
-                android:angle="270" />
-            <stroke
-                android:width="1dp"
-                android:color="#ff243546" />
-            <corners
-                android:radius="7dp" />
-            <padding
-                android:left="10dp"
-                android:top="10dp"
-                android:right="10dp"
-                android:bottom="10dp" />
+            <solid
+                android:color="#333" />
         </shape>
     </item>
 </selector>

@@ -14,21 +14,15 @@
         android:layout_margin="8dp"
         android:layout_weight="3"
         android:background="#000"
-        android:orientation="horizontal"
-        android:padding="18dp">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="14"
-            android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="8dp">
 
             <TextView
                 android:id="@+id/display_input"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:paddingBottom="10dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="4dp"
                 android:textColor="#fff"
                 android:textSize="20sp"
                 android:singleLine="false">
@@ -39,23 +33,16 @@
             <TextView
                 android:id="@+id/display_result"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="4dp"
                 android:text="0"
                 android:textColor="#fff"
                 android:textSize="20sp">
 
                 <requestFocus />
             </TextView>
-        </LinearLayout>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:onClick="onBackspaceClick"
-            android:background="@drawable/bg_backspacebutton"/>
     </LinearLayout>
 
     <LinearLayout
@@ -83,7 +70,9 @@
                 android:layout_height="0dp"
                 android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:text="sin"/>
+                android:text="sin"
+                android:background="@drawable/bg_button2"
+                android:onClick="onSymbolClicked" />
 
             <Button
                 style="@style/theAnhstyle"
@@ -91,7 +80,9 @@
                 android:layout_height="0dp"
                 android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:text="cos"/>
+                android:text="cos"
+                android:background="@drawable/bg_button2"
+                android:onClick="onSymbolClicked" />
 
             <Button
                 style="@style/theAnhstyle"
@@ -99,7 +90,9 @@
                 android:layout_height="0dp"
                 android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:text="tan"/>
+                android:text="tan"
+                android:background="@drawable/bg_button2"
+                android:onClick="onSymbolClicked" />
 
             <Button
                 style="@style/theAnhstyle"
@@ -107,7 +100,9 @@
                 android:layout_height="0dp"
                 android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:text="π"/>
+                android:text="("
+                android:background="@drawable/bg_button2"
+                android:onClick="onSymbolClicked" />
 
             <Button
                 style="@style/theAnhstyle"
@@ -115,7 +110,9 @@
                 android:layout_height="0dp"
                 android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:text="!"/>
+                android:text=")"
+                android:background="@drawable/bg_button2"
+                android:onClick="onSymbolClicked" />
         </LinearLayout>
 
         <LinearLayout
@@ -133,7 +130,8 @@
                 android:layout_height="0dp"
                 android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:text="ln"/>
+                android:text="!"
+                android:background="@drawable/bg_button2"/>
 
             <Button
                 style="@style/theAnhstyle"
@@ -141,7 +139,8 @@
                 android:layout_height="0dp"
                 android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:text="log"/>
+                android:text="log"
+                android:background="@drawable/bg_button2" />
 
             <Button
                 style="@style/theAnhstyle"
@@ -149,7 +148,8 @@
                 android:layout_height="0dp"
                 android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:text="e"/>
+                android:text="e"
+                android:background="@drawable/bg_button2" />
 
             <Button
                 style="@style/theAnhstyle"
@@ -157,7 +157,8 @@
                 android:layout_height="0dp"
                 android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:text="^"/>
+                android:text="^"
+                android:background="@drawable/bg_button2" />
 
             <Button
                 style="@style/theAnhstyle"
@@ -165,7 +166,8 @@
                 android:layout_height="0dp"
                 android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:text="√"/>
+                android:text="√"
+                android:background="@drawable/bg_button2" />
         </LinearLayout>
 
         <LinearLayout
@@ -192,7 +194,8 @@
                     android:layout_margin="2dp"
                     android:layout_weight="1"
                     android:onClick="onSymbolClicked"
-                    android:text="7"/>
+                    android:text="7"
+                    android:background="@drawable/bg_button" />
 
                 <Button
                     android:id="@+id/number8"
@@ -202,7 +205,8 @@
                     android:layout_margin="2dp"
                     android:layout_weight="1"
                     android:onClick="onSymbolClicked"
-                    android:text="8"/>
+                    android:text="8"
+                    android:background="@drawable/bg_button" />
 
                 <Button
                     android:id="@+id/number9"
@@ -212,7 +216,8 @@
                     android:layout_margin="2dp"
                     android:layout_weight="1"
                     android:onClick="onSymbolClicked"
-                    android:text="9"/>
+                    android:text="9"
+                    android:background="@drawable/bg_button" />
 
                 <Button
                     style="@style/theAnhstyle2"
@@ -221,7 +226,8 @@
                     android:layout_margin="2dp"
                     android:layout_weight="1"
                     android:onClick="onOperatorClicked"
-                    android:text="/"/>
+                    android:text="/"
+                    android:background="@drawable/bg_button2" />
 
                 <Button
                     style="@style/theAnhstyle2"
@@ -229,8 +235,9 @@
                     android:layout_height="match_parent"
                     android:layout_margin="2dp"
                     android:layout_weight="1"
-                    android:onClick="onSymbolClicked"
-                    android:text="("/>
+                    android:onClick="onBackspaceClick"
+                    android:text="←"
+                    android:background="@drawable/bg_button2" />
             </LinearLayout>
 
             <LinearLayout
@@ -249,7 +256,8 @@
                     android:layout_margin="2dp"
                     android:layout_weight="1"
                     android:onClick="onSymbolClicked"
-                    android:text="4"/>
+                    android:text="4"
+                    android:background="@drawable/bg_button" />
 
                 <Button
                     android:id="@+id/number5"
@@ -259,7 +267,8 @@
                     android:layout_margin="2dp"
                     android:layout_weight="1"
                     android:onClick="onSymbolClicked"
-                    android:text="5"/>
+                    android:text="5"
+                    android:background="@drawable/bg_button" />
 
                 <Button
                     android:id="@+id/number6"
@@ -269,7 +278,8 @@
                     android:layout_margin="2dp"
                     android:layout_weight="1"
                     android:onClick="onSymbolClicked"
-                    android:text="6"/>
+                    android:text="6"
+                    android:background="@drawable/bg_button" />
 
                 <Button
                     style="@style/theAnhstyle2"
@@ -278,7 +288,8 @@
                     android:layout_margin="2dp"
                     android:layout_weight="1"
                     android:onClick="onOperatorClicked"
-                    android:text="*"/>
+                    android:text="*"
+                    android:background="@drawable/bg_button2" />
 
                 <Button
                     style="@style/theAnhstyle2"
@@ -286,8 +297,9 @@
                     android:layout_height="match_parent"
                     android:layout_margin="2dp"
                     android:layout_weight="1"
-                    android:onClick="onSymbolClicked"
-                    android:text=")"/>
+                    android:onClick="onACClicked"
+                    android:text="AC"
+                    android:background="@drawable/bg_button2" />
             </LinearLayout>
 
             <LinearLayout
@@ -322,7 +334,8 @@
                             android:layout_margin="2dp"
                             android:layout_weight="1"
                             android:onClick="onSymbolClicked"
-                            android:text="1"/>
+                            android:text="1"
+                            android:background="@drawable/bg_button" />
 
                         <Button
                             android:id="@+id/number2"
@@ -332,7 +345,8 @@
                             android:layout_margin="2dp"
                             android:layout_weight="1"
                             android:onClick="onSymbolClicked"
-                            android:text="2"/>
+                            android:text="2"
+                            android:background="@drawable/bg_button" />
 
                         <Button
                             android:id="@+id/number3"
@@ -342,7 +356,8 @@
                             android:layout_margin="2dp"
                             android:layout_weight="1"
                             android:onClick="onSymbolClicked"
-                            android:text="3"/>
+                            android:text="3"
+                            android:background="@drawable/bg_button" />
 
                         <Button
                             style="@style/theAnhstyle2"
@@ -351,7 +366,8 @@
                             android:layout_margin="2dp"
                             android:layout_weight="1"
                             android:onClick="onOperatorClicked"
-                            android:text="-"/>
+                            android:text="-"
+                            android:background="@drawable/bg_button2" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -370,7 +386,8 @@
                             android:layout_margin="2dp"
                             android:layout_weight="2.07"
                             android:onClick="onSymbolClicked"
-                            android:text="0"/>
+                            android:text="0"
+                            android:background="@drawable/bg_button" />
 
                         <Button
                             style="@style/theAnhstyle3"
@@ -379,7 +396,8 @@
                             android:layout_margin="2dp"
                             android:layout_weight="1"
                             android:onClick="onSymbolClicked"
-                            android:text="."/>
+                            android:text="."
+                            android:background="@drawable/bg_button" />
 
                         <Button
                             style="@style/theAnhstyle2"
@@ -388,7 +406,8 @@
                             android:layout_margin="2dp"
                             android:layout_weight="1"
                             android:onClick="onOperatorClicked"
-                            android:text="+"/>
+                            android:text="+"
+                            android:background="@drawable/bg_button2" />
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
@@ -404,7 +423,8 @@
                             android:id="@+id/ansButton"
                             android:text="Ans"
                             android:onClick="onAnsClick"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_button2" />
                         <Button
                             style="@style/theAnhstyle2"
                             android:layout_width="match_parent"
@@ -412,7 +432,8 @@
                             android:layout_margin="2dp"
                             android:layout_weight="1"
                             android:onClick="onEvaluated"
-                            android:text="="/>
+                            android:text="="
+                            android:background="@drawable/bg_button2" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

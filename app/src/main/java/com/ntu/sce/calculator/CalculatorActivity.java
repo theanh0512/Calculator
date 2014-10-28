@@ -110,6 +110,10 @@ public class CalculatorActivity extends DrawerActivity {
             setDisplayText(currentText + buttonText);
     }
 
+    public void onACClicked(View view){
+        clearDisplay();
+    }
+
     public void onEvaluated(View view) {
         isEvaluateClicked = true;
         String currentDisplayText = getDisplayText();
